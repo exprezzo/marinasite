@@ -9,77 +9,66 @@
 	$menus[]=array(
 		'idMenu'=>'menuHome',
 		'estado'=>'',
-		'text'=>'Home',
+		'text'=>'Inicio',
 		'url'=>'/'.$_PETICION->modulo.'/paginas/home'
 	);
 	$menus[]=array(
 		'idMenu'=>'menuProyectos',
 		'estado'=>'',
-		'text'=>'Proyectos',
+		'text'=>'Productos',
 		'url'=>'/'.$_PETICION->modulo.'/paginas/proyectos'
+	);
+	$menus[]=array(
+		'idMenu'=>'menuServicios',
+		'estado'=>'',
+		'text'=>'Servicios',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/servicios'
 	);
 	$menus[]=array(
 		'idMenu'=>'menuNews',
 		'estado'=>'',
-		'text'=>'News',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/news'
-	);
-	$menus[]=array(
-		'idMenu'=>'menuAbout',
-		'estado'=>'',
-		'text'=>'About Us',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/about_us'
+		'text'=>'Publicaciones',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/publicaciones'
 	);
 	
+	$menus[]=array(
+		'idMenu'=>'menuBolsa',
+		'estado'=>'',
+		'text'=>'Bolsa de trabajo',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/bolsa'
+	);
 	
-	$menus[]=array(
-		'idMenu'=>'menuGuias',
-		'estado'=>'',
-		'text'=>'Guias',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/guias'
-	);
-	$menus[]=array(
-		'idMenu'=>'menuApi',
-		'estado'=>'',
-		'text'=>'api',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/api'
-	);
 	$menus[]=array(
 		'idMenu'=>'menuContac',
 		'estado'=>'',
-		'text'=>'Contact',
+		'text'=>'Contacto',
 		'url'=>'/'.$_PETICION->modulo.'/paginas/contact'
 	);
 	
-
-	
-	
-	$raiz= empty($_PETICION->modulo)? '/' : '/'.$_PETICION->modulo.'/';
-	
-	for($i=0; $i<sizeof($menus); $i++ ){
-		if ( $raiz.$_PETICION->controlador.'/'.$_PETICION->accion == $menus[$i]['url'] ){
-			$menus[$i]['estado']='ui-state-active';
-		}
-	}	
 ?>
 <style>
 	
 </style>
 <script>
 	$(function(){
-		$('#menu_principal li').mouseenter(function(){
-			$(this).addClass('ui-state-hover');
-		});			
-		$('#menu_principal li').mouseleave(function(){
-			$(this).removeClass('ui-state-hover');
-		});
-		
-		
+		// $('#menu_principal li').mouseenter(function(){
+			// $(this).addClass('ui-state-hover');
+		// });			
+		// $('#menu_principal li').mouseleave(function(){
+			// $(this).removeClass('ui-state-hover');
+		// });		
 	});
 </script>
 	
 	<ul  class="ui-widget">	
 		<?php
+		$raiz= empty($_PETICION->modulo)? '/' : '/'.$_PETICION->modulo.'/';
+	
+		for($i=0; $i<sizeof($menus); $i++ ){
+			if ( $raiz.$_PETICION->controlador.'/'.$_PETICION->accion == $menus[$i]['url'] ){
+				$menus[$i]['estado']='activo';
+			}
+		}	
 		for($i=0; $i<sizeof($menus); $i++){
 			echo '<li '.$menus[$i]['idMenu'].' class="ui-state-default '.$menus[$i]['estado'].'"><a href="'.$menus[$i]['url'].'">'.$menus[$i]['text'].'</a></li>';
 		}

@@ -2,22 +2,21 @@
 	
 </style>
 <div class="main_header" >
-	<div id="menu_principal">
-		<?php $this->mostrar('/menu');	?>
-		<div class="user-box">
-			<a href="/<?php echo $_PETICION->modulo; ?>/user/login">entrar</a>
-			<a href="/<?php echo $_PETICION->modulo; ?>/user/signup">registrarse</a>
-		</div>
-	</div>
+	
 	
 	<div class="logo">
 		<img  src="/web/apps/<?php echo APP_MODULE; ?>/imagenes/logo2.png" />
 		<div class="titulo">
-			<span>Marina</span>
-			<span>...
+			<span>Marina Virtual </span>
+			<span>soluciones web.
 		</div>
 	</div>
-	
+	<div id="menu_principal">
+		<?php $this->mostrar('/menu');	?>
+		<!--div class="user-box">
+			<a href="/<?php echo $_PETICION->modulo; ?>/user/login">entrar</a>			
+		</div-->
+	</div>
 	
 	<div class="seach-box">
 		<form class="searchform">

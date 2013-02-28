@@ -11,8 +11,8 @@ body{background-repeat:no-repeat;padding:0;margin:0;}
 
 .main_content .contenido .contenido_center{background:white;width:800px; float:left;display:block; margin-right:20px; padding:10px;} 
 .contenido_center{
-	width:700px;
-	margin-left:50px;
+	width:100%;
+	margin-left:0;
 	float:left;
 	
 }
@@ -26,7 +26,7 @@ body{background-repeat:no-repeat;padding:0;margin:0;}
 	box-shadow:         7px 7px 5px rgba(50, 50, 50, 0.75);
 	border:1px solid black;*/
 }
-.main_header{ height:210px; position:relative; }
+.main_header{ height:140px; position:relative; }
 .main_header {}
 
 .main_header .logo img{position:absolute; width: 0px;left: -14px;top: 30px; }

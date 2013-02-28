@@ -12,7 +12,7 @@
 	
 	
 	.contenido_center .content_header label:first-child{
-		font-family:krona-one, serif; font-size: 33px;display:block;/*  text-shadow: 4px 4px 2px rgba(150, 150, 150, 1); */
+		font-family:krona-one, serif; font-size: 33px;display:block; text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 	}
 	.imagen_octopus{position:absolute;right:0;width:70%;height:100%;background-repeat:no-repeat !important;
 		background-image:url('/web/apps/marina/imagenes/octopus/Octopus_by_Ghouley.png') !important;
@@ -38,20 +38,6 @@
 </div-->
 <!--div class="tira_videos"></div-->
 <div style="padding:10px" >
-	<div class="content_header ">
-		<br />	
-		<label class="" style="font-size:30px;">Sitio web básico.</label>
-		<br />		<br />
-		
-		Incluye:<br />
-		<ul>
-			<li>Template a escojer.</li>
-			<li>Administrador de contenidos.</li>
-			<li>Documentación en linea.</li>
-			<li>Actualizaciones.</li>
-		</ul>
-			
-	</div>
 	
 	<div class="content_header ">	
 		<label class="" style="font-size:30px;">Octopus CMS.</label>	
@@ -63,33 +49,18 @@
 	</span>	
 	<br>
 	<br>
-	<span class="ui-state-default titulo">Características:</span>
+	<span class="ui-state-default titulo">Modulos:</span>
 	<br>				
-		<h4>Front-end</h4>
-		<ul>						
-			<li>Busqueda y página de resultados</li>			
-			<li>Social Login.</li>
-			<li>Sistema de comentarios.</li>			
-			<li>Contacto.</li>
-			<li>Notificaciones del sitio.</li>
-		</ul>
-		
-		<h4>Backend</h4>
 		<ul>
-			<li>Modulo basico.
-				<ul>
-					<li>Configuracion del sitio (template, nombre, slogan, logo,favion, menus).</li>
-				</ul>
-				
-			</li>
-			<li>Instalador de modulos.</li>
-			<li>Administrador de catálogos.</li>		
-			
-			<li>Templates para correos.</li>			
-			<li>Perfil</li>
-			<li>Editor de paginas</li>
+			<li>Temas.</li>				
+			<li>Menu Wizard</li>
+			<li>Busqueda y página de resultados</li>
+			<li>Comportamiento catálogo</li>
+			<li>Social Login.</li>	
+			<li>Identificación de usuarios, perfil y recuperación de contraseñas.</li>
+			<li>Templates para correos.</li>
 			<li>Pagina de contacto configurable.</li>
-		</ul>
+		</ul>	
 	<br>
 	<span class="ui-state-default titulo">Caracter&iacute;sticas en desarrollo:</span>
 

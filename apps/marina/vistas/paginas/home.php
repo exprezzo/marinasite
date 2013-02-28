@@ -14,8 +14,24 @@
 		font-size:25px;
 	}
 </style>
-HOME
-<!--
-Marina es un framework de desarrollo para php, ha sido probado en construcci&oacute;n de sitios web, backends y modulos para sistemas tipo erp.
-Especial si quiere crear sistemas usando plantillas, o construir a la medida
--->
+<div class="indice"> 
+	<h4>Productos:</h4>
+	<ul>
+		<li>Octopus Cms</li>
+		<li>Coral Erp</li>
+		<li>Sonar News System</li>
+	</ul>
+	<h4>Ultimas Publicaciones:</h4>
+	<ul>
+		<li>¿Que es un portal web?</li>
+		<li>¿Proceso de creación de un portal?</li>
+	</ul>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

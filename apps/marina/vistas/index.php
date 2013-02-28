@@ -46,6 +46,7 @@
 	<div class="header_wraper">
 		<?php $this->mostrar('/header'); ?>
 	</div>
+	<div class="slider">Slider</div>
 	<div class="content_wraper">
 		<div class="contenido">
 			<div class="contenido_center ui-widget-content">

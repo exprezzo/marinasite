@@ -18,12 +18,12 @@
 		'text'=>'Productos',
 		'url'=>'/'.$_PETICION->modulo.'/paginas/proyectos'
 	);
-	$menus[]=array(
-		'idMenu'=>'menuServicios',
-		'estado'=>'',
-		'text'=>'Servicios',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/servicios'
-	);
+	// $menus[]=array(
+		// 'idMenu'=>'menuServicios',
+		// 'estado'=>'',
+		// 'text'=>'Servicios',
+		// 'url'=>'/'.$_PETICION->modulo.'/paginas/servicios'
+	// );
 	$menus[]=array(
 		'idMenu'=>'menuNews',
 		'estado'=>'',
@@ -32,11 +32,24 @@
 	);
 	
 	$menus[]=array(
-		'idMenu'=>'menuBolsa',
+		'idMenu'=>'menuComunidad',
 		'estado'=>'',
-		'text'=>'Bolsa de trabajo',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/bolsa'
+		'text'=>'Comunidad',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/comunidad'
 	);
+	
+	$menus[]=array(
+		'idMenu'=>'menuSucursales',
+		'estado'=>'',
+		'text'=>'Sucursales',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/sucursales'
+	);
+	// $menus[]=array(
+		// 'idMenu'=>'menuBolsa',
+		// 'estado'=>'',
+		// 'text'=>'Bolsa de trabajo',
+		// 'url'=>'/'.$_PETICION->modulo.'/paginas/bolsa'
+	// );
 	
 	$menus[]=array(
 		'idMenu'=>'menuContac',
@@ -47,7 +60,9 @@
 	
 ?>
 <style>
-	
+	#menu_principal .ui-state-hover{
+		
+	}
 </style>
 <script>
 	$(function(){
@@ -66,7 +81,7 @@
 	
 		for($i=0; $i<sizeof($menus); $i++ ){
 			if ( $raiz.$_PETICION->controlador.'/'.$_PETICION->accion == $menus[$i]['url'] ){
-				$menus[$i]['estado']='activo';
+				$menus[$i]['estado']='ui-state-active';
 			}
 		}	
 		for($i=0; $i<sizeof($menus); $i++){

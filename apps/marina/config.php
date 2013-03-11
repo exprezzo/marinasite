@@ -7,7 +7,7 @@ $DB_CONFIG=array(
 	'DB_USER'	=>'root',
 	'DB_PASS'	=>''
 );
-$_TEMA='blitzer';
+$_TEMA='rocket';
 
 
 	

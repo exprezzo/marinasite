@@ -1,6 +1,6 @@
 <style>
 	body{		
-			background-image:url('/web/apps/marina/imagenes/bg6_1.jpg') !important;
+			background-image:url('/web/apps/marina/imagenes/bg6_1 - copia.jpg') !important;
 	}
 	.contenido_center{
 		/*background:#f0dc6b !important;	padding:0 !important;
@@ -39,6 +39,40 @@
 <!--div class="tira_videos"></div-->
 <div style="padding:10px" >
 	<div class="content_header ">
+		<h1>Coral ERP:</h1>
+		<h4>Modulos Basicos.</h4>
+		<ul>			
+			<li>Venta en linea.</li>
+			<li>Inventarios.</li>			
+			<li>Seguridad y listas de control de accesos.</li>
+			<li>Compras.</li>
+			<li>Ventas.</li>
+			<li>Facturacion.</li>
+			<li>Contabilidad.</li>			
+		</ul>
+		
+		<h4>Catalogos Basicos.</h4>
+		<ul>			
+			<li>Configuracion General</li>
+			<li>Empresa</li>
+			<li>Sucursales</li>
+			<li>Almacenes</li>
+			<li>Usuarios</li>
+			<li>Perfil de usuario</li>
+		</ul>
+		
+		
+		
+		<h4>Comportamientos Generales</h4>
+		<ul>			
+			<li>Seguridad y listas de control de accesos.</li>
+			<li>Empresa</li>
+			<li>Sucursales</li>
+			<li>Almacenes</li>
+			<li>Usuarios</li>
+			<li>Perfil de usuario</li>
+		</ul>
+		
 		<br />	
 		<label class="" style="font-size:30px;">Sitio web básico.</label>
 		<br />		<br />
@@ -76,18 +110,26 @@
 		
 		<h4>Backend</h4>
 		<ul>
-			<li>Modulo basico.
+			<li>Módulo basico.
 				<ul>
 					<li>Configuracion del sitio (template, nombre, slogan, logo,favion, menus).</li>
-				</ul>
-				
-			</li>
+				</ul>				
+			</li>			
+			<li>Comportamiento catálogo.
+				<ul>
+					<li>Teclas rapidas para guardar, eliminar, cerrar, crear nuevo.</li>
+					<li>Notificación de cambios antes de cerrar.</li>
+					<li>Confirmación para eliminación.</li>
+					<li>Navegación optimizada.</li>
+					<li>Impresiones.</li>
+					<li>Envio de la información por email.</li>
+					<li>Restricción de acceso configurable.</li>
+				</ul>				
+			</li>	
 			<li>Instalador de modulos.</li>
-			<li>Administrador de catálogos.</li>		
-			
 			<li>Templates para correos.</li>			
 			<li>Perfil</li>
-			<li>Editor de paginas</li>
+			<li>Editor de paginas web</li>
 			<li>Pagina de contacto configurable.</li>
 		</ul>
 	<br>

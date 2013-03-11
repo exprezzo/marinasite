@@ -7,11 +7,11 @@
 	<div class="logo">
 		<img  src="/web/apps/<?php echo APP_MODULE; ?>/imagenes/logo2.png" />
 		<div class="titulo">
-			<span>Marina Virtual </span>
-			<span>soluciones web.
+			<span>Marina Suite. </span>
+			<span>soluciones web.</span>
 		</div>
 	</div>
-	<div id="menu_principal">
+	<div id="menu_principal" style="position:relative;text-align:center;">
 		<?php $this->mostrar('/menu');	?>
 		<!--div class="user-box">
 			<a href="/<?php echo $_PETICION->modulo; ?>/user/login">entrar</a>			

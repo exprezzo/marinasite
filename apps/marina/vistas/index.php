@@ -23,21 +23,121 @@
 	<script src="/web/libs/Wijmo.2.3.2/Wijmo-Open/js/jquery.wijmo-open.all.2.3.2.min.js" type="text/javascript"></script>	
 	<!--script src="http://use.edgefonts.net/krona-one.js"></script-->			
 	
+	
+	
+	<script type="text/javascript" src="http://workshop.rs/projects/coin-slider/coin-slider.min.js"></script>
+	<link rel="stylesheet" href="http://workshop.rs/projects/coin-slider/coin-slider-styles.css" type="text/css" />
+
 	<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/estilos.css" rel="stylesheet" type="text/css" />'; ?>
 	
 	<style>
+		.slider{			
+			/* background-color:black !important;			*/
+			position:relative;
+		}
+		body{
+			/* background-image:url('http://loadpaper.com/large/Linux_wallpapers_320.jpg');			
+			background-image:url('http://www.fondosblackberry.com/user-content/uploads/wall/o/54/34845-gbpics.eu.jpg');
+			*/
+			background-image:url('http://www.fondosypantallas.com/wp-content/uploads/2009/02/ph-102083.jpg');			
+			background-color:#092f46;
+			background-repeat:repeat;
+		}
 		
+		.content_wraper{
+			/* background-color:black !important;			*/
+			width:80% !important;			
+		}
+		
+		.medusa{
+			background-image:url('/web/apps/marina/imagenes/medusa.jpg');
+			width:81px;
+			height:91px;
+			position:absolute;
+		}
+		
+		.contenido{
+			
+			position:relative;
+		}
+		
+		#coin-slider{
+				left:50%;
+				margin-left:-450px;
+		}
+		.main_header{
+			/* background-image: url('http://themedemo.pmnova.com/wp-content/themes/Blue_Skyline/images/Page-BgGlare.png') !important;
+			background-repeat: no-repeat !important; */
+		}
+		.contenido_center.ui-widget-content{
+			border-radius:6px;
+		}
+		.main_slideshow {
+			/*animation-duration: 60s;
+			animation-name: slidein;
+			animation-iteration-count: infinite;
+			
+			-webkit-animation-duration:7s;
+			-webkit-animation-name:slidein;		  
+        	-webkit-animation-iteration-count: infinite;*/
+		}
+		
+		@-webkit-keyframes slidein /* Safari and Chrome */
+		{
+		0% {background: yellow;}
+		25% {background: red;}		
+	   50% { background: blue; }
+	   75% { background: green; }
+	   100% { background: yellow; }
+		}
+		
+		
+		@keyframes slidein {
+		  from {
+			background-color: red;
+			
+		  }
+		 
+		  to {
+			background-color: blue;
+		  }
+		}
+		.main_slideshow{
+			display:none;
+		}
+		.content_wraper{
+		
+		margin-bottom: 24px;
+		margin-left: 156px;
+	}
 	</style>
 	<link href="/web/apps/<?php echo $_PETICION->modulo.'/temas_mod/'.$_TEMA; ?>/mods.css" rel="stylesheet" type="text/css" />	
 	<script>
 		$(function(){
-			var width=$('.main_header #menu_principal').width();
-			var margin=width/2;
-			$('.main_header ').css('left','50%');
-			$('.main_header ').css('margin-left','-'+margin+'px');
-			$('.main_header').width(width);
-			//$('.main_header').width(width);
+			// var width=$('.main_header #menu_principal').width();
+			// var margin=width/2;
+			// $('.main_header ').css('left','50%');
+			// $('.main_header ').css('margin-left','-'+margin+'px');
+			// $('.main_header').width(width);
+			
 		
+			$('#menu_principal li').bind('mouseover',function(el,d){
+				 console.log("el2");
+				console.log(el);
+				console.log("d");
+				console.log(d);
+				 $(el.currentTarget).addClass('ui-state-hover'); 
+			});
+			
+			$('#menu_principal li').bind('mouseout',function(el,d){
+				 console.log("el2");
+				console.log(el);
+				console.log("d");
+				console.log(d);
+				 $(el.currentTarget).removeClass('ui-state-hover'); 
+			});
+			// $('#coin-slider').coinslider({ width: 920});
+
 		});
 		
 	</script>
@@ -46,10 +146,58 @@
 	<div class="header_wraper">
 		<?php $this->mostrar('/header'); ?>
 	</div>
-	<div class="slider">Slider</div>
+	<div class="main_slideshow" style="height:190px;background-color:yellow;width:100%;">
+		<div class="slider" style="display:none;">
+		<div id='coin-slider'>
+			<a href="img01_url" target="_blank">
+				<img src='http://www.tn3gallery.com/images/920x360/7.jpg' >
+				<span>
+					Description for img01
+				</span>
+			</a>
+
+			<a href="imgN_url">
+				<img src='http://www.tn3gallery.com/images/920x360/12.jpg' >
+				<span>
+					Description for imgN
+				</span>
+			</a>
+			
+			<a href="imgN_url">
+				<img src='http://www.tn3gallery.com/images/920x360/7.jpg' >
+				<span>
+					Description for imgN
+				</span>
+			</a>
+			
+			<a href="imgN_url">
+				<img src='http://www.tn3gallery.com/images/920x360/2.jpg' >
+				<span>
+					Description for imgN
+				</span>
+			</a>
+			
+			<a href="imgN_url">
+				<img src='http://www.tn3gallery.com/images/920x360/3.jpg' >
+				<span>
+					Description for imgN
+				</span>
+			</a>
+			
+			<a href="imgN_url">
+				<img src='http://www.tn3gallery.com/images/920x360/4.jpg' >
+				<span>
+					Description for imgN
+				</span>
+			</a>
+		</div>
+	</div>
+	</div>
+	
+
 	<div class="content_wraper">
 		<div class="contenido">
-			<div class="contenido_center ui-widget-content">
+			<div class="contenido_center ui-widget-content" style="background:white;">
 				<?php $this->mostrar(''); ?>
 			</div>
 			<div class="content_right" > 
@@ -61,9 +209,11 @@
 	<div class="footer_wraper">footer_wraper</div>
 	<style>
 		body{
-			background-image:url('/web/apps/marina/imagenes/bg6_4.jpg');
+			/* background-image:url('/web/apps/marina/imagenes/bg6_4.jpg'); */
 		}
 	</style>
+	
+	
 </body>
 
 </html>

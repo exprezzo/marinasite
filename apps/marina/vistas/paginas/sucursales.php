@@ -15,6 +15,7 @@
 	.lista_sucursales li{
 		display:block;
 		border:none !important;
+		margin-top:15px;
 	}
 	
 	.lista_sucursales .mini_mapa{border:11px solid black;width:200px;height:150px; display:inline-block; border-radius:15px; overflow: hidden; }	
@@ -37,6 +38,21 @@
 		vertical-align:top;
 		margin-top:74px;
 		margin-left:40px;
+	}
+	
+	body{		
+		background-image:url('/web/apps/marina/imagenes/bg6_1.jpg') !important;	
+		background-repeat:no-repeat !important;
+	}
+	.content_wraper{
+		margin-top: 18px;
+		left: 10px;
+		margin-left: 44px;
+		width: 900px !important
+	}
+	.contenido_center{
+		background: transparent !important;
+		border: none !important;
 	}
 </style>
 

@@ -12,12 +12,34 @@
 		'text'=>'Inicio',
 		'url'=>'/'.$_PETICION->modulo.'/paginas/home'
 	);
+	
 	$menus[]=array(
-		'idMenu'=>'menuProyectos',
+		'idMenu'=>'menuMVC',
 		'estado'=>'',
-		'text'=>'Productos',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/proyectos'
+		'text'=>'Marina MVC',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/marinamvc'
 	);
+	
+	$menus[]=array(
+		'idMenu'=>'menuOctopus',
+		'estado'=>'',
+		'text'=>'Octopus',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/octopus'
+	);
+	
+	$menus[]=array(
+		'idMenu'=>'menuCoral',
+		'estado'=>'',
+		'text'=>'Coral',
+		'url'=>'/'.$_PETICION->modulo.'/paginas/coral'
+	);
+	
+	// $menus[]=array(
+		// 'idMenu'=>'menuProyectos',
+		// 'estado'=>'',
+		// 'text'=>'Productos',
+		// 'url'=>'/'.$_PETICION->modulo.'/paginas/proyectos'
+	// );
 	// $menus[]=array(
 		// 'idMenu'=>'menuServicios',
 		// 'estado'=>'',
@@ -31,19 +53,13 @@
 		'url'=>'/'.$_PETICION->modulo.'/paginas/publicaciones'
 	);
 	
-	$menus[]=array(
-		'idMenu'=>'menuComunidad',
-		'estado'=>'',
-		'text'=>'Comunidad',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/comunidad'
-	);
 	
-	$menus[]=array(
-		'idMenu'=>'menuSucursales',
-		'estado'=>'',
-		'text'=>'Sucursales',
-		'url'=>'/'.$_PETICION->modulo.'/paginas/sucursales'
-	);
+	// $menus[]=array(
+		// 'idMenu'=>'menuSucursales',
+		// 'estado'=>'',
+		// 'text'=>'Sucursales',
+		// 'url'=>'/'.$_PETICION->modulo.'/paginas/sucursales'
+	// );
 	// $menus[]=array(
 		// 'idMenu'=>'menuBolsa',
 		// 'estado'=>'',

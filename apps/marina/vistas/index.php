@@ -110,6 +110,52 @@
 		margin-bottom: 24px;
 		margin-left: 156px;
 	}
+	.contenido_center.ui-widget-content{
+		border-radius:0px !important;
+		
+	}
+	
+	h4{
+		background: black;
+		color: white;
+		margin-left: -10px;
+		padding: 13px 63px 13px 22px;
+		border: 1px solid black;
+		display: inline-block;
+		box-shadow: 10px 10px 5px #888888;
+		cursor:pointer;
+		transition: box-shadow 1s, height 2s, transform 2s;
+		-moz-transition: box-shadow 1s, height 2s, -moz-transform 2s;
+		-webkit-transition: box-shadow 1s, height 2s, -webkit-transform 2s;
+		-o-transition: box-shadow 1s, height 2s,-o-transform 2s;
+	}
+	h4:hover{
+		box-shadow: 10px 10px 5px #092f46;
+	}
+	
+	
+	
+	h4 {
+		 text-align: center;     
+	}
+	h4:before, h4:after {
+		font-family: "Some cool font with glyphs", serif;
+		content: "\00d7";  /* Some fancy character */
+		color: #c83f3f;
+	}
+	h4:before {
+		margin-right: 10px;
+	}
+	h4:after {
+		margin-left: 10px;
+	}
+		#menu_principal li{
+			transition: background .2s, border .2s;
+			-moz-transition: background .2s, border .2s; /* Firefox 4 */
+			-webkit-transition: background .2s, border .2s; /* Safari and Chrome */
+			-o-transition: background .2s, border .2s; /* Opera */
+			
+		}
 	</style>
 	<link href="/web/apps/<?php echo $_PETICION->modulo.'/temas_mod/'.$_TEMA; ?>/mods.css" rel="stylesheet" type="text/css" />	
 	<script>
@@ -197,7 +243,7 @@
 
 	<div class="content_wraper">
 		<div class="contenido">
-			<div class="contenido_center ui-widget-content" style="background:white;">
+			<div class="contenido_center " >
 				<?php $this->mostrar(''); ?>
 			</div>
 			<div class="content_right" > 
@@ -206,12 +252,33 @@
 			<div style="clear:both;"></div>
 		</div>
 	</div>
-	<div class="footer_wraper">footer_wraper</div>
-	<style>
-		body{
-			/* background-image:url('/web/apps/marina/imagenes/bg6_4.jpg'); */
-		}
-	</style>
+	
+	<div class="footer_wraper" style="color:white;">
+		<style>
+			.footer_wraper .opciones{ text-align:left;margin-left:121px;}
+			.footer_wraper {
+				height:200px !important;
+				background-image:url('/web/apps/marina/imagenes/bg6_8_2.jpg');
+			}
+			.footer_wraper li{display:inline-block;padding:10px 30px 10px 0px;}
+		</style>
+		<p style="margin-left:161px;padding-top:5px;">
+		 Marina is a trademark of Exprezzo. All rights reserved.
+		 </p>
+		
+		<ul class="opciones">
+			<li>Inicio</li>
+			<li>Mapa del sitio</li>
+			<li>Nosotros</li>					
+			<li>Patrocinadores</li>
+			<li>Contacto</li>
+			<li>Login</li>
+		</ul>
+		<?php $this->mostrar('/footer'); ?>
+	</div>
+	
+		
+	
 	
 	
 </body>

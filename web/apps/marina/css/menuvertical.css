@@ -11,10 +11,10 @@ body{
 }
 
 #navigationMenu{
-	position:relative;
+	position:absolute;
 	z-index:1000;
-	top:12px;
-	left:20px;
+	top:8px;
+	
 }
 
 #navigationMenu li{
@@ -27,7 +27,7 @@ body{
 #navigationMenu span{
 	/* Container properties */
 	width:0;
-	left:38px;
+	left:279px;
 	padding:0;
 	position:absolute;
 	overflow:hidden;

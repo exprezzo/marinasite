@@ -3,7 +3,7 @@
 
 $DB_CONFIG=array(
 	'DB_SERVER'	=>'localhost',
-	'DB_NAME'	=>'airlines',
+	'DB_NAME'	=>'mazatleca',
 	'DB_USER'	=>'root',
 	'DB_PASS'	=>''
 );

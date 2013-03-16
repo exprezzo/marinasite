@@ -1,0 +1,38 @@
+.w_noticia{
+    display:inline-block;
+}
+.w_noticia li{
+    padding:8px;
+    border:2px solid #ddd;
+    list-style:none;
+    margin-bottom:12px;
+}
+.w_noticia .titulo{    
+    clear:both;
+}
+.w_noticia .imagen{
+    width:288px;
+    overflow:hidden;
+    height:112px;
+    display:inline-block;
+}
+.w_noticia .autor{
+    float:right;
+    margin:10px 0 10px 0;
+}
+.w_noticia .fecha{
+    float:left;
+    margin:10px 0 10px 0;
+}
+
+.w_noticia .categoria{
+    color:green;
+}
+.w_noticia .titulo{
+    font-size:1.4em;
+	
+}
+.w_noticia a{
+	text-decoration:none;
+}
+

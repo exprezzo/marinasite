@@ -1,24 +1,30 @@
 <style>
-	
+	.seach-box:after{
+		content:'';
+		clear:both;
+	}
 </style>
 <div class="main_header" >
-	
-	
-	<div class="logo">
-		<img  src="/web/apps/<?php echo APP_MODULE; ?>/imagenes/logo2.png" />
-		<div class="titulo">
-			<span>Marina Suite. </span>
-			<span>soluciones web.</span>
-		</div>
-	</div>
-	<div id="menu_principal" style="position:relative;text-align:center;">
-		<?php $this->mostrar('/menu');	?>
+		
+	<div id="menu_principal" style="position:relative;text-align:center;z-index:1;">
+		<ul id="navigationMenu">
+			<li><a href="/home"><span>Home</span></a>
+			</li>
+			<li><a href="/publicaciones"><span>Publicaciones</span></a>
+			</li>
+			<li><a href="/contacto"><span>Contacto</span></a>
+			</li>
+		</ul>
 		<!--div class="user-box">
-			<a href="/<?php echo $_PETICION->modulo; ?>/user/login">entrar</a>			
+			<a href="/<?php //echo $_PETICION->modulo; ?>/user/login">entrar</a>			
 		</div-->
 	</div>
-	
-	<div class="seach-box">
+	<div class="sitename" style="color: white;z-index:-1;
+position:absolute;
+width:100%;
+text-align: center;font-size:44px;">Mundo Friki</div>
+
+	<div class="seach-box" style="z-index:2;">
 		<form class="searchform">
 			<input class="searchfield" type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}">
 			<input class="searchbutton" type="button" value="Go">

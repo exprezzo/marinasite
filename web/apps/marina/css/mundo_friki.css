@@ -1,3 +1,4 @@
+.w_noticia{ max-height:1150pxs;overflow:auto; }
 
 .main_header .logo .titulo{
 	margin-top:10px;
@@ -158,10 +159,4 @@ body{
 #navigationMenu a{
 	position:static !important;
 }
-#navigationMenu li{
-	display:inline-block !important;
-	
-}
-.titulo{
-	
-}
+#navigationMenu li{ display:inline-block !important;}

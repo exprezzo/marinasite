@@ -13,7 +13,7 @@
 			<li><a href="/publicaciones"><span>Publicaciones</span></a>
 			</li>
 			<li><a href="/contacto"><span>Contacto</span></a>
-			</li>
+		
 		</ul>
 		<!--div class="user-box">
 			<a href="/<?php //echo $_PETICION->modulo; ?>/user/login">entrar</a>			

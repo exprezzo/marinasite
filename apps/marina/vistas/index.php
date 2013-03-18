@@ -272,7 +272,7 @@
 			<li>Nosotros</li>					
 			<li>Patrocinadores</li>
 			<li>Contacto</li>
-			<li>Login</li>
+			<li><a href="/admin/users/login">Login</a></li>
 		</ul>
 		<?php $this->mostrar('/footer'); ?>
 	</div>

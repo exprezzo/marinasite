@@ -1,3 +1,6 @@
+#navigationMenu li:nth-child(4):before {background-color:blue;}
+#navigationMenu li:nth-child(4) a {background-image: url('http://png.findicons.com/files/icons/1672/mono/32/search.png');width:32px;height:32px;}
+
 #menu_principal{left:16px;}
 #navigationMenu{margin: 1px 0 5px 0;padding: 0;float:left;}
 #navigationMenu li:nth-child(1):before {background-color:yellow;}
@@ -72,3 +75,4 @@
     height: 93%;
     background-color:black;
 }
+

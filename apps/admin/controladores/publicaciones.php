@@ -10,36 +10,36 @@ class Publicaciones extends Controlador{
 		return $this->modObj;
 	}
 	/* */
-	function guardar(){
+	// function guardar(){
 		
 		
-		if ( empty($_POST['datos']) ){
-			$res=array(
-				'success'=>false,
-				'msg'=>'No se recibieron datos para almacenar'
-			);
-			echo json_encode($res); exit;
-		}
-		$datos= $_POST['datos'];
+		// if ( empty($_POST['datos']) ){
+			// $res=array(
+				// 'success'=>false,
+				// 'msg'=>'No se recibieron datos para almacenar'
+			// );
+			// echo json_encode($res); exit;
+		// }
+		// $datos= $_POST['datos'];
 		
 		
-		// $datos['fk_user']=$
 		
-		$model=$this->getModel();				
-		$res = $model->guardar($datos);
 		
-		if (!$res['success']) {			
-			echo json_encode($res); exit;
-		}
-		// $pk=$res['datos']['id'];
+		// $model=$this->getModel();				
+		// $res = $model->guardar($datos);
 		
-		$datos=$res['datos'];
+		// if (!$res['success']) {			
+			// echo json_encode($res); exit;
+		// }
 		
-		//----------------
 		
-		$res['datos']=$datos;		
-		echo json_encode($res);
-	}
+		// $datos=$res['datos'];
+		
+		
+		
+		// $res['datos']=$datos;		
+		// echo json_encode($res);
+	// }
 	function index(){
 		$vista=$this->getVista();
 		$vista->mostrar('publicaciones/busqueda');

@@ -1,49 +1,100 @@
+<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
 <style>
-
-
+	.info:first-letter {
+		display:block;
+		margin:-9px 0 0 0px;
+	}
+	.info{
+		border:0px solid #eee;
+		border-right-width:2px;
+	}
 </style>
-<div class="publicacion" style="width:780px;">
-    
-    <div class="rectangle">
-         <h2>Titulo de la publicación</h2>
-    </div>    
-    <div class="triangle-l"></div>
-    <h2 class="datos_pub">Cesar Octavio, abril/12/2012</h2>
-    <div style="clear:both;"></div>
-    <img style="border:1px solid #aaa;margin:30px 27px 0 10px;float:right; width:400px;height:235px;" src="http://4.bp.blogspot.com/-o_i4-9IY-BI/UCYUMO2xltI/AAAAAAAAADY/ikqgWLqcB9k/s1600/Business+Website+Design.jpg" >
-    <div class="info">
-         
-
-        <p>Esta es una publicacion de prueba. Lorem ipsum dolor lorem noseque Lorem
-            ipsum dolor lorem nosequeLorem ipsum dolor lorem nosequeLorem ipsum dolor
-            lorem nosequeLorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque
-            Lorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque.<br />
-            Lorem  dolor lorem noseque Lorem ipsum dolor lorem noseque
-            lorem nosequeLorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque lorem nosequeLorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque lorem nosequeLorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque lorem nosequeLorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque
-            Lorem ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque. Lorem
-            ipsum dolor lorem noseque Lorem ipsum dolor lorem noseque
-            
-            <p>
 
 
-            </p>
-    </div>
-    
-    <script type="text/javascript">
-		/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-		var disqus_shortname = 'fastorder'; // required: replace example with your forum shortname
-		//var disqus_identifier = 'scrum';
-		var disqus_url='http://www.exprezzo.tk/publicaciones';
-		/* * * DON'T EDIT BELOW THIS LINE * * */
-		(function() {
-			var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-			dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-		})();
-	</script>
-	<div class="" style="margin:20px;">		
-		<div id="disqus_thread"></div>		
-		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+	<div class="col_center" style="float:left;">
+		<!-- -->
+		<?php 
+			$i=0;
+			foreach($this->publicaciones as $idx=>$pub){				
+				if ($idx==0){
+					$shareUrl='http://exprezzo.tk/publicaciones/ver?id='.$pub['id'];
+		?>
+		<div class="social" style="margin-top:41px;margin-left:16px;float:right;">
+			<span class='st_sharethis_large' 	st_url="<?php echo $shareUrl; ?>" displayText='ShareThis'></span>
+			<span class='st_plusone_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Google +1'></span>
+			<span class='st_fblike_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Facebook Like'></span>
+			<span class='st_facebook_large' 	st_url="<?php echo $shareUrl; ?>" displayText='Facebook'></span>
+			<span class='st_twitter_large'		st_url="<?php echo $shareUrl; ?>" displayText='Tweet'></span>
+			<span class='st_linkedin_large' 	st_url="<?php echo $shareUrl; ?>" displayText='LinkedIn'></span>
+			<span class='st_pinterest_large' 	st_url="<?php echo $shareUrl; ?>" displayText='Pinterest'></span>
+			<span class='st_email_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Email'></span>
+			<span class='st_fbsend_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Facebook Send'></span>
+			<script type="text/javascript">var switchTo5x=true;</script>
+			<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+			<script type="text/javascript">stLight.options({publisher: "160b52cb-facd-4e9b-b412-6cb92d9443b6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+		</div>
+		<?php } ?>
+		<div style="clear:both;"></div>
+		<!-- -->
+		<div class="rectangle" style="">
+			 <h2><?php echo $pub['titulo']; ?></h2>
+		</div>    
+		<div class="triangle-l"></div>		
+		<div style="clear:both;"></div>		
+		
+		<div class="info" style="margin-top:32px;">
+			 <?php echo $pub['contenido']; ?>
+			
+		</div>
+		<!-- DISQUS -->
+		<?php if ($idx==0){ ?>
+		<script type="text/javascript">
+			/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+			var disqus_shortname = 'fastorder'; // required: replace example with your forum shortname
+			//var disqus_identifier = 'scrum';
+			var disqus_url='http://www.exprezzo.tk/publicaciones/ver/id=?<?php echo $pub['id']; ?>';
+			
+			/* * * DON'T EDIT BELOW THIS LINE * * */
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<div class="" style="margin:20px;">		
+			<div id="disqus_thread"></div>		
+			<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+			<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+		</div>		
+		<!-- ***************  -->
+		<?php } ?>
+		<?php } ?>
+	</div>
+	<div class="col_r" style="float:right;display:inline-block;vertical-align:top; margin-top:30px; margin-right:96px;width:300px;" >
+		<ul class="w_noticia">
+		<?php
+			foreach($this->publicaciones as $pub){
+				$fecha=DateTime::createFromFormat (  'Y-m-d H:i:s' ,  $pub['fecha'] );
+				$fecha=$fecha->format('F d, Y.');
+				?>
+				    
+				<li>
+					<div class="imagen"><img src='http://www.tonylea.com/wp-content/uploads/2011/04/jsfiddle-javascript-playground-thumb.png'; style="margin-top:-56px;width:288px;" /> </div>
+					<div class="datos">
+						<div class="fecha"><?php echo $fecha; ?></div>   
+						<div class="autor"><?php echo $pub['autor']; ?></div>   
+					</div>
+					<div class="titulo"><a href="/publicaciones/ver?id=<?php echo $pub['id']; ?>"><span><?php echo $pub['titulo']; ?> </span> </a></div>				
+					<div class="categoria"><?php echo $pub['categoria']; ?> </div>   					
+				</li>
+						
+					
+					
+
+				<?
+			}
+		?>
+		</ul>		
 	</div>
 </div>

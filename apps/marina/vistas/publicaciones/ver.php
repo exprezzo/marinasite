@@ -10,16 +10,19 @@
 
 	<div class="col_center" style="float:left;">
 		<!-- -->
+		<?php 
+			$shareUrl='http://exprezzo.tk/publicaciones/ver?id='.$this->publicacion['id'];
+		?>
 		<div class="social" style="margin-top:41px;margin-left:16px;float:right;">
-			<span class='st_sharethis_large' displayText='ShareThis'></span>
-			<span class='st_plusone_large' displayText='Google +1'></span>
-			<span class='st_fblike_large' displayText='Facebook Like'></span>
-			<span class='st_facebook_large' displayText='Facebook'></span>
-			<span class='st_twitter_large' displayText='Tweet'></span>
-			<span class='st_linkedin_large' displayText='LinkedIn'></span>
-			<span class='st_pinterest_large' displayText='Pinterest'></span>
-			<span class='st_email_large' displayText='Email'></span>
-			<span class='st_fbsend_large' displayText='Facebook Send'></span>
+			<span class='st_sharethis_large' 	st_url="<?php echo $shareUrl; ?>" displayText='ShareThis'></span>
+			<span class='st_plusone_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Google +1'></span>
+			<span class='st_fblike_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Facebook Like'></span>
+			<span class='st_facebook_large' 	st_url="<?php echo $shareUrl; ?>" displayText='Facebook'></span>
+			<span class='st_twitter_large'		st_url="<?php echo $shareUrl; ?>" displayText='Tweet'></span>
+			<span class='st_linkedin_large' 	st_url="<?php echo $shareUrl; ?>" displayText='LinkedIn'></span>
+			<span class='st_pinterest_large' 	st_url="<?php echo $shareUrl; ?>" displayText='Pinterest'></span>
+			<span class='st_email_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Email'></span>
+			<span class='st_fbsend_large' 		st_url="<?php echo $shareUrl; ?>" displayText='Facebook Send'></span>
 			<script type="text/javascript">var switchTo5x=true;</script>
 			<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
 			<script type="text/javascript">stLight.options({publisher: "160b52cb-facd-4e9b-b412-6cb92d9443b6", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>

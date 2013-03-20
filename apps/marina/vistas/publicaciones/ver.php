@@ -68,10 +68,15 @@
 			foreach($this->publicaciones as $pub){
 				$fecha=DateTime::createFromFormat (  'Y-m-d H:i:s' ,  $pub['fecha'] );
 				$fecha=$fecha->format('F d, Y.');
+				// echo $pub['position'];
+				
+				$posx= empty($pub['posx'])? 0 : $pub['posx'].'px';
+				$posy= empty($pub['posy'])? 0 : $pub['posy'].'px';
+				
 				?>
 				    
 				<li>
-					<div class="imagen"><img src='http://www.tonylea.com/wp-content/uploads/2011/04/jsfiddle-javascript-playground-thumb.png'; style="margin-top:-56px;width:288px;" /> </div>
+					<div class="imagen"><img src='<?php echo $pub['imagen']; ?>'; style="margin-left:-<?php echo $posx; ?>;margin-top:-<?php echo $posy; ?>;" /> </div>
 					<div class="datos">
 						<div class="fecha"><?php echo $fecha; ?></div>   
 						<div class="autor"><?php echo $pub['autor']; ?></div>   

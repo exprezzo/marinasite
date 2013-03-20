@@ -59,6 +59,9 @@
 </style>
 <script src="/web/apps/<?php echo $_PETICION->modulo; ?>/js/catalogos/<?php echo $_PETICION->controlador; ?>/edicion.js"></script>
 
+<script src="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/jcrop/js/jquery.Jcrop.min.js"></script>
+<link rel="stylesheet" href="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/jcrop/css/jquery.Jcrop.css" type="text/css" />
+
 <script>	
 	$( function(){				
 		var edicion = new EdicionPublicacion();
@@ -78,11 +81,50 @@
 			 $(this).parent('.boton').addClass("ui-state-hover");						
 		});
 		
-		$(tabId+' .toolbarEdicion .boton').mouseleave(function(e){			 
-				$(this).removeClass("ui-state-hover");			
+		$(tabId+' .toolbarEdicion .boton').mouseleave(function(e){
+			$(this).removeClass("ui-state-hover");
+		});
+		
+		var jcrop_api;
+		var posx = $(tabId+' input[name="posx"]').val();
+		var posy = $(tabId+' input[name="posy"]').val();
+		
+		$(tabId+' input[name="url_imagen"]').bind('change',function(){
+			
+			$(tabId+' .tiny_image').attr('src', $(this).val() );
+			jcrop_api.destroy();
+			// jcrop_api.setSelect([ 0, 0, 288, 112 ]);
+			$(tabId+' .tiny_image').Jcrop({
+				minSize:[288,112],
+				maxSize:[288,112],
+				setSelect:   [ posx, posy, posx+288, posy+112 ]
+			},function(){
+				jcrop_api = this;
+			});			
 		});
 		
 		
+		
+		$(tabId+' .tiny_image').Jcrop({
+			minSize:[288,112],
+			maxSize:[288,112],
+			setSelect:   [ posx, posy, posx+288, posy+112 ]
+		},function(){
+			jcrop_api = this;
+		});
+		
+		$('.btnSelection').bind('click',function(){
+			var sel= jcrop_api.tellSelect();
+			// console.log("sel"); console.log(sel);
+			
+			var cadena='{"x":'+sel.x+', "y":'+sel.y+'}';
+			
+			
+			$(tabId+' input[name="posx"]').val(sel.x);
+			$(tabId+' input[name="posy"]').val(sel.y);
+			// position
+			// alert(sel[0],sel[1]);
+		});
 	});
 </script>
 
@@ -92,6 +134,11 @@
 		$titulo= empty($this->datos['titulo'])? 'ESCRIBA UN TITULO' : $this->datos['titulo'];
 		$contenido= empty($this->datos['contenido'])? 'contenido' : $this->datos['contenido'];
 		
+		$posx= empty($this->datos['posx'])? 0 : $this->datos['posx'];
+		$posy= empty($this->datos['posy'])? 0 : $this->datos['posy'];
+		
+		
+		$url_imagen= empty($this->datos['imagen'])? '' : $this->datos['imagen'];
 	}else{
 		$id=0;
 		$titulo=0;
@@ -119,18 +166,21 @@
 					<label style="width:auto;">Titulo:</label>
 					<input type='text' name='titulo' class="txtTitulo" id="txtTitulo" value="<?php echo $titulo; ?>" style="width:500px;" />
 				</div>
-				
-				
-				<div class="inputBox" style='margin-bottom:8px;display:inline;height:26px;margin-left:10px;'>					
-					<label style="width:auto;">Contenido:</label><br />												
 							
-							
-					
-						
+				<div class="inputBox" style='margin-bottom:8px;display:inline;margin-left:10px;'>					
+					<label style="width:auto;">Contenido:</label><br />																		
 					<textarea type='text' name='contenido' class="txtContenido" id="txtContenido" value=""  style="width:600px;text-align:left;height:400px;"><?php echo $contenido; ?>
 					</textarea>
-				</div>				
-			</div>			
+				</div>								
+			</div>		
+			
+			<input type="text" name="url_imagen"value="<?php echo $url_imagen; ?>" />	
+			<input class="btnSelection" type="button"/>
+			<input type="text" name="posx" value="<?php echo $posx; ?>" />
+			<input type="text" name="posy" value="<?php echo $posy; ?>" />
+			<div style="">
+				<img style="width:auto" class="tiny_image" src="<?php echo $url_imagen; ?>" />
+			</div>
 			<br />	
 		</form>		
 	</div>

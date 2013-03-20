@@ -30,6 +30,7 @@
 
 	<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/estilos.css" rel="stylesheet" type="text/css" />'; ?>
 	
+	
 	<style>
 		.slider{			
 			/* background-color:black !important;			*/

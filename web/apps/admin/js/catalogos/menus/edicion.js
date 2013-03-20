@@ -106,13 +106,12 @@ var EdicionPublicacion = function(){
 		var tab = $('#tabs '+tabId);
 		var me=this;
 	
+	
+		
 		var datos={
 			id			: tab.find('.txtId').val(),			
-			titulo		:tab.find('.txtTitulo').val(),
-			contenido	:tab.find('.txtContenido').val(),
-			url_imagen	:tab.find('input[name="url_imagen"]').val(),
-			posx	:tab.find('input[name="posx"]').val(),
-			posy	:tab.find('input[name="posy"]').val()
+			titulo:tab.find('.txtTitulo').val(),
+			contenido:tab.find('.txtContenido').val()
 		};
 		
 		//Envia los datos al servidor, el servidor responde success true o false.

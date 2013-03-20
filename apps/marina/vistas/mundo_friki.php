@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="http://workshop.rs/projects/coin-slider/coin-slider-styles.css" type="text/css" />
 	<link href="/web/apps/marina/css/menu_fresco.css"  rel="stylesheet" type="text/css" />
 	<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/mundo_friki.css" rel="stylesheet" type="text/css" />'; ?>
-	
+	<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
 	<style>
 		.slider{			
 			/* background-color:black !important;			*/

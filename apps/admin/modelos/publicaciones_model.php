@@ -12,22 +12,33 @@ class PublicacionModel extends Modelo{
 		
 		$autor=$_SESSION['userInfo']['name'];
 		$fk_autor=$_SESSION['userInfo']['id'];
+		
+		$imagen=$params['url_imagen'];
+		$posx=$params['posx'];
+		$posy=$params['posy'];
+		
 		if ( empty($id) ){
 			//           CREAR
-			$sql='INSERT INTO '.$this->tabla.' SET titulo=:titulo, contenido=:contenido, fecha= now(), fk_categoria=1, fk_autor=:fk_autor,autor=:autor';
+			$sql='INSERT INTO '.$this->tabla.' SET titulo=:titulo,imagen=:imagen,posx=:posx,posy=:posy, contenido=:contenido, fecha= now(), fk_categoria=1, fk_autor=:fk_autor,autor=:autor';
 			$sth = $dbh->prepare($sql);							
 			$sth->bindValue(":titulo",$titulo,PDO::PARAM_STR);					
 			$sth->bindValue(":contenido",$contenido,PDO::PARAM_STR);
 			$sth->bindValue(":autor",$autor,PDO::PARAM_STR);					
 			$sth->bindValue(":fk_autor",$fk_autor,PDO::PARAM_INT);			
+			$sth->bindValue(":imagen",$imagen,PDO::PARAM_STR);					
+			$sth->bindValue(":posy",$posy,PDO::PARAM_INT);			
+			$sth->bindValue(":posx",$posx,PDO::PARAM_INT);			
 			$msg="Publcacion Guardada";
 		}else{
 			//	         ACTUALIZAR
-			$sql='UPDATE '.$this->tabla.' SET titulo=:titulo, contenido=:contenido WHERE id=:id';
+			$sql='UPDATE '.$this->tabla.' SET titulo=:titulo,imagen=:imagen, posx=:posx, posy=:posy, contenido=:contenido WHERE id=:id';
 			$sth = $dbh->prepare($sql);							
 			$sth->bindValue(":id",$id,PDO::PARAM_INT);			
 			$sth->bindValue(":titulo",$titulo,PDO::PARAM_STR);
 			$sth->bindValue(":contenido",$contenido,PDO::PARAM_STR);
+			$sth->bindValue(":imagen",$imagen,PDO::PARAM_STR);					
+			$sth->bindValue(":posy",$posy,PDO::PARAM_INT);			
+			$sth->bindValue(":posx",$posx,PDO::PARAM_INT);						
 			$msg="Publcacion Actualizada";
 		}
 		$success = $sth->execute();

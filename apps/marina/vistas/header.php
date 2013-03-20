@@ -25,9 +25,9 @@ width:100%;
 text-align: center;font-size:44px;">Mundo Friki</div>
 
 	<div class="seach-box" style="z-index:2;">
-		<form class="searchform">
+		<form class="searchform" action="/resultados" >
 			<input class="searchfield" type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}">
-			<input class="searchbutton" type="button" value="Go">
+			<input class="searchbutton" type="submit" value="Go">
 		</form>
 	</div>
 	

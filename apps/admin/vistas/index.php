@@ -5,8 +5,8 @@ if ( !isset($_SESSION['isLoged'])|| $_SESSION['isLoged']!=true ){
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="us">
-<head>
-	<meta charset="utf-8">
+<head>	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title><?php echo NOMBRE_APL; ?></title>
 	<!--jQuery References-->
 	<!--link href="/js/jquery-ui-1.9.2.custom/css/flick/jquery-ui-1.9.2.custom.css" rel="stylesheet"-->	

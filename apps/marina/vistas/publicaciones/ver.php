@@ -30,14 +30,13 @@
 		<div style="clear:both;"></div>
 		<!-- -->
 		<div class="rectangle" style="">
-			 <h2><?php echo $this->publicacion['titulo']; ?></h2>
+			 <h2><?php echo htmlentities( $this->publicacion['titulo'],ENT_QUOTES | ENT_IGNORE, "UTF-8"); ?></h2>
 		</div>    
 		<div class="triangle-l"></div>		
 		<div style="clear:both;"></div>		
 		
 		<div class="info" style="margin-top:32px;">
-			 <?php echo $this->publicacion['contenido']; ?>
-			
+			 <?php echo  $this->publicacion['contenido']  ; ?>			
 		</div>
 		<!-- DISQUS -->
 		
@@ -62,35 +61,5 @@
 		
 		<!-- ***************  -->
 	</div>
-	<div class="col_r" style="float:right;display:inline-block;vertical-align:top; margin-top:30px; margin-right:96px;width:300px;" >
-		<ul class="w_noticia">
-		<?php
-			foreach($this->publicaciones as $pub){
-				$fecha=DateTime::createFromFormat (  'Y-m-d H:i:s' ,  $pub['fecha'] );
-				$fecha=$fecha->format('F d, Y.');
-				// echo $pub['position'];
-				
-				$posx= empty($pub['posx'])? 0 : $pub['posx'].'px';
-				$posy= empty($pub['posy'])? 0 : $pub['posy'].'px';
-				
-				?>
-				    
-				<li>
-					<div class="imagen"><img src='<?php echo $pub['imagen']; ?>'; style="margin-left:-<?php echo $posx; ?>;margin-top:-<?php echo $posy; ?>;" /> </div>
-					<div class="datos">
-						<div class="fecha"><?php echo $fecha; ?></div>   
-						<div class="autor"><?php echo $pub['autor']; ?></div>   
-					</div>
-					<div class="titulo"><a href="/publicaciones/ver?id=<?php echo $pub['id']; ?>"><span><?php echo $pub['titulo']; ?> </span> </a></div>				
-					<div class="categoria"><?php echo $pub['categoria']; ?> </div>   					
-				</li>
-						
-					
-					
-
-				<?
-			}
-		?>
-		</ul>		
-	</div>
+	<?php $this->mostrar('sidebar'); ?>
 </div>

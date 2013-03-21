@@ -8,7 +8,17 @@ class Publicaciones extends Controlador{
 			// $this->modObj = new PublicacionModel();	
 		// }	
 		// return $this->modObj;
-	// }		
+	// }
+		
+		
+	function editar(){
+		global $_PETICION;
+		$_PETICION->accion='ver';
+		
+		$vista=$this->getVista();
+		$vista->edicion=true;
+		return $this->ver();
+	}
 	function ver($vistaFile=''){				
 		$vista= $this->getVista();			
 		$model=$this->getModel();		

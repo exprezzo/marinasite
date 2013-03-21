@@ -208,7 +208,7 @@
 		<div class="contenido">
 			<div class="contenido_center " >
 				<div class="bubble">
-					<?php $this->mostrar(''); ?>
+					<?php $this->mostrar(); ?>
 				</div>
 			</div>
 			<div class="content_right" > 
@@ -220,24 +220,28 @@
 	
 	<div class="footer_wraper" style="color:white;">
 		<style>
-			.footer_wraper .opciones{ text-align:left;margin-left:121px;}
+			.footer_wraper .opciones{ text-align:left;float:right;displlay:inline-block;padding:0}
+			.opciones li a,.opciones li a:visited{
+				color:white;
+				text-decoration:none;
+			}
 			.footer_wraper {
 				height:200px !important;
 				background-image:url('/web/apps/marina/imagenes/bg6_8_2.jpg');
 			}
 			.footer_wraper li{display:inline-block;padding:10px 30px 10px 0px;}
 		</style>
-		<p style="margin-left:161px;padding-top:5px;">
+		<p style="margin-left:16px;padding-top:5px;float:left;">
 		 Marina is a trademark of Exprezzo. All rights reserved.
 		 </p>
 		
 		<ul class="opciones">
-			<li>Inicio</li>
-			<li>Mapa del sitio</li>
-			<li>Nosotros</li>					
-			<li>Patrocinadores</li>
-			<li>Contacto</li>
-			<li>Login</li>
+			<li><a href="/home" >Inicio</a></li>
+			<li><a href="#">Mapa del sitio</a></li>
+			<li><a href="#">Nosotros</a></li>					
+			<li><a href="#">Patrocinadores</a></li>
+			<li><a href="/contacto">Contacto</a></li>
+			<li><a href="/admin/general/index">Login</a></li>
 		</ul>
 		<?php $this->mostrar('/footer'); ?>
 	</div>

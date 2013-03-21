@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50508
 File Encoding         : 65001
 
-Date: 2013-03-18 10:11:38
+Date: 2013-03-21 15:23:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -20,10 +20,10 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `cms_categorias_publicaciones`;
 CREATE TABLE `cms_categorias_publicaciones` (
-  `id` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nombre` char(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cms_categorias_publicaciones
@@ -32,6 +32,8 @@ INSERT INTO `cms_categorias_publicaciones` VALUES ('1', 'Programacion');
 INSERT INTO `cms_categorias_publicaciones` VALUES ('2', 'Diseño Web');
 INSERT INTO `cms_categorias_publicaciones` VALUES ('3', 'Seguridad');
 INSERT INTO `cms_categorias_publicaciones` VALUES ('4', 'Marketing');
+INSERT INTO `cms_categorias_publicaciones` VALUES ('5', 'Entretenimiento');
+INSERT INTO `cms_categorias_publicaciones` VALUES ('6', 'Gaming');
 
 -- ----------------------------
 -- Table structure for `cms_menus`
@@ -90,16 +92,17 @@ CREATE TABLE `cms_publicaciones` (
   `fk_autor` int(11) DEFAULT NULL,
   `fk_categoria` int(11) DEFAULT NULL,
   `enPortada` tinyint(1) DEFAULT NULL,
+  `imagen` char(255) DEFAULT NULL,
+  `posx` int(11) DEFAULT NULL,
+  `posy` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of cms_publicaciones
 -- ----------------------------
-INSERT INTO `cms_publicaciones` VALUES ('1', 'Te va a gustar JsFiddle..', '<img src=\"https://github.com/jsfiddle/jsfiddle-chrome-app/diff_blob/9121ec0c9bcbbaa3b7c5c5c6767f9273ea8d71ea/media/screenshot-logo.png?raw=true\" style=\"float: left; margin: 0px 10px 10px 0px; width: 352px; height: 242px;\" alt=\"\">Me gusta encontrar herramientas web como esta, desde que la encontrÃ© forma parte de mi trabajo diario, gracias a este par: Piotr y Oskar, ya publicare en otro post que mas tienen por ahi estos dos personajes.\n<p>Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â Lorem Ipsum Dolor Sit Ame.Â </p>\n					', '2013-03-16 09:14:39', 'Cesar Octavio', '1', '1', '1');
-INSERT INTO `cms_publicaciones` VALUES ('12', 'Esta es mi nueva publicacion desde el cms', 'Y claro aqui esta el contenido;<img src=\"http://blogs.microsoft.co.il/blogs/gilf/CSS3Logo_406A9E5E.jpg\" style=\"float: right; margin: 0px 0px 10px 10px;\" alt=\"\">&nbsp;&nbsp;Y claro aqui esta el contenido;Y claro aqui esta el contenido;Y claro aqui esta el', '2013-03-17 18:20:22', null, null, null, '1');
-INSERT INTO `cms_publicaciones` VALUES ('13', 'estos vatos', '<span style=\"line-height: 1.45em;vertical-align: top;\"><iframe width=\"560\" height=\"315\" src=\"http://www.youtube.com/embed/GUw8KuGzHWQ\" frameborder=\"0\" allowfullscreen=\"\" style=\"float: left; margin: 0px 10px 10px 0px;\"></iframe>She opens her case, starts putting together her instrument. \"Joe studied at a conservatory inÂ </span><i style=\"line-height: 1.45em;\">Fronce</i><span style=\"line-height: 1.45em;\">. Did he tell you?\" Of course she doesn\'t sayÂ </span><i style=\"line-height: 1.45em;\">France</i><span style=\"line-height: 1.45em;\">Â so it rhymes with dance like a normal English-speaking human being. I can feel Sarah bristling beside me. She has zero tolerance for Rachel ever since she got first chair over me, but Sarah doesnâ€˜t know what really happened â€” no one does.</span><p>Rachel\'s tightening the ligature on her mouthpiece like she\'s trying to asphyxiate her clarinet. \"Joe was aÂ <i>fabulous</i>Â second in your absence.\" she says, drawing out the wordÂ <i>fabulous</i>Â from here to the Eiffel Tower.</p><p>I don\'t fire-breathe at her: \"Glad everything worked out for you, Rachel.\" I don\'t say a word, just wish I could curl into a ball and roll away. Sarah, on the other hand, looks like she wishes there were a battle-ax handy.</p><p>The room has become a clamor of random notes and scales. \"Finish up tuning, I want to start at the bell today,\" Mr. James calls from theÂ piano. \"And take out your pencils. lâ€™ve made some changes to the arrangement.\"</p><p></p>\n					', '2013-03-17 18:45:06', null, '1', '1', '1');
-INSERT INTO `cms_publicaciones` VALUES ('14', 'ESCRIBA UN TITULO', 'contenido					', '2013-03-18 09:26:35', 'Zesar X', '1', '1', null);
+INSERT INTO `cms_publicaciones` VALUES ('1', 'Te va a gustar JsFiddle..', '<img src=\"https://github.com/jsfiddle/jsfiddle-chrome-app/diff_blob/9121ec0c9bcbbaa3b7c5c5c6767f9273ea8d71ea/media/screenshot-logo.png?raw=true\" style=\"float: left; margin: 0px 10px 10px 0px; width: 352px; height: 242px;\" alt=\"\"><p>Si, apenas me doy cuenta de que JSFIDDLE es la onda, si les gusta la programación o el diseño web, no te pierdas de esta herramienta.</p>\n', '2013-03-16 09:14:39', 'Cesar Octavio', '1', '2', '1', 'http://doc.jsfiddle.net/_downloads/jsfiddle-desktop-1440x900-a.png', '582', '507');
+INSERT INTO `cms_publicaciones` VALUES ('3', 'Ã¡lbum de The Beatles, cumple 50 aÃ±os', '<p><img src=\"http://blu.stb.s-msn.com/i/0A/DC9A2B8D5EECC15245FFB643CC15.jpg\" style=\"float: left; margin: 0px 10px 10px 0px;\" alt=\"\">Londres, 21 mar (EFE).- \"Please Please Me\", el á á primer disco de la banda británica The Beatles que supuso un antes y un después en la historia de la música, celebra mañana el 50 aniversario de su publicación, con temas imborrables como \"Twist And Shout\" o \"P.S. I Love You\".</p><p>Catorce canciones componen el álbum debut del cuarteto de Liverpool que dio origen a la \"Beatlemanía\" y cambió las vidas de John Lennon, Paul McCartney, George Harrison y Ringo Starr.</p><p>La salida comercial de \"Please Please Me\" siguió los éxitos del sencillo homónimo y de \"Love Me Do\", que los \"Fabulosos Cuatro\" interpretaban en directo en el mítico local \"The Cavern\" de su ciudad natal, Liverpool.</p><p>El disco trepó por las listas de ventas y el 11 de mayo de 1963 alcanzó el número uno en el Reino Unido, posición que conservó durante 30 semanas hasta ser desbancado precisamente por el segundo trabajo del cuarteto, \"With The Beatles\".</p><p>El emblemático estudio londinense Abbey Road, lugar de peregrinación para los seguidores de la banda, fue el escenario de la grabación de \"Please Please Me\" como lo sería posteriormente de \"Sgt. Pepper\'s Lonely Hearts Club Band\" o \"The White Album\", entre otros.</p><p>El 11 de febrero de 1963, el productor George Martin, apodado \"el quinto beatle\", reunió a Lennon, McCartney, Harrison y Starr para una maratoniana sesión de grabación que se alargaría 585 minutos, es decir, 9 horas y 45 minutos.</p><p>Ese día, la banda británica grabó diez canciones de \"Please Please Me\" a pesar del resfriado de John Lennon, que sentía la garganta dolorida y como \"papel de lija\".</p><p>Por temor a no concluir el disco si el músico y compositor perdía la voz, se dejó la canción \"Twist And Shout\" para el final de la intensa sesión, que había comenzado a las diez de la mañana con el tema \"There\'s A Place\".</p><p>Tras trece tomas, los músicos prosiguieron con \"I Saw Her Standing There\" y \"Hold Me Tight\", finalmente desechada para el primer álbum pero que se incluyó en su segundo disco.</p><p>Lennon puso voz a la mayoría de los temas que se grabaron en Abbey Road, si bien McCartney se le sumó en \"Misery\" y George Harrison se estrenó en \"Do You Want To Know a Secret\" y \"Chains\".</p><p>El batería, Ringo Starr, que se había incorporado a la banda en 1962 propuesto por George Martin, dejó las baquetas por el micrófono en una canción, \"Boys\", inaugurando una tradición que se mantendría hasta el último álbum de The Beatles, \"Abbey Road\".</p><p>En términos económicos, \"Please Please Me\" no pudo ser más rentable puesto que sólo costó 400 libras (468 euros), una cifra pequeña si se compara con el presupuesto de 75.000 dólares (58.000 euros) de \"Sgt. Pepper\'s\" en 1967.</p><p>El fotógrafo Angus McBean se encargó de la portada del disco, en la que se ve a los \"Fabulosos Cuatro\" en las escaleras de la sede londinense de la compañía discográfica EMI, una imagen que recrearon de nuevo para la portada de \"Get Back\" (1969).</p><p>\"Please Please Me\" (1963) fue el comienzo de una carrera de doce álbumes de estudio que The Beatles sacaron al mercado desde su nacimiento oficial en 1962 hasta el 10 de abril de 1970, cuando McCartney informó de la separación de la banda en un comunicado.</p><p>Medio siglo después, canciones como \"Twist And Shout\" o \"I Saw You Standing There\" siguen conquistando a los seguidores del grupo que mantiene el honor de ser el que más discos ha vendido en la historia, un récord estimado en alrededor de mil millones de copias.</p><p>Por Paula Díaz</p><p>Copyright (c) Agencia EFE, S.A. 2011, todos los derechos reservados</p>\n										', '2013-03-21 09:35:49', 'Zesar X', '1', '5', null, 'http://www.wallpaper4me.com/images/wallpapers/thebeatles-181393.jpeg', '270', '414');
 
 -- ----------------------------
 -- Table structure for `system_users`

@@ -7,17 +7,13 @@
 <div class="main_header" >
 		
 	<div id="menu_principal" style="position:relative;text-align:center;z-index:1;">
-		<ul id="navigationMenu">
-			<li><a href="/home"><span>Home</span></a>
-			</li>
-			<li><a href="/publicaciones"><span>Publicaciones</span></a>
-			</li>
-			<li><a href="/contacto"><span>Contacto</span></a>
-		
-		</ul>
-		<!--div class="user-box">
-			<a href="/<?php //echo $_PETICION->modulo; ?>/user/login">entrar</a>			
-		</div-->
+		<?php
+		if (isset($this->edicion) &&  $this->edicion=== true){
+			$this->mostrar('/menu_edicion');
+		}else{
+			$this->mostrar('/menu');
+		}		
+		?>
 	</div>
 	<div class="sitename" style="color: white;z-index:-1;
 position:absolute;

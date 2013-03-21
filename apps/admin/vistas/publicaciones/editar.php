@@ -133,7 +133,7 @@
 		$id= empty($this->datos['id'])?0 : $this->datos['id'];
 		$titulo= empty($this->datos['titulo'])? 'ESCRIBA UN TITULO' : $this->datos['titulo'];
 		$contenido= empty($this->datos['contenido'])? 'contenido' : $this->datos['contenido'];
-		
+		$fk_categoria = empty($this->datos['fk_categoria'])? 0 : $this->datos['fk_categoria'];
 		$posx= empty($this->datos['posx'])? 0 : $this->datos['posx'];
 		$posy= empty($this->datos['posy'])? 0 : $this->datos['posy'];
 		
@@ -166,8 +166,16 @@
 					<label style="width:auto;">Titulo:</label>
 					<input type='text' name='titulo' class="txtTitulo" id="txtTitulo" value="<?php echo $titulo; ?>" style="width:500px;" />
 				</div>
-							
-				<div class="inputBox" style='margin-bottom:8px;display:inline;margin-left:10px;'>					
+				<div class="inputBox" style='margin-bottom:8px;display:inline;margin-left:10px;width:100%;' >
+					<label style="width:auto;">Categor&iacute;a:</label>
+					<select name="fk_categoria">
+						<?php foreach($this->categorias as $categoria){
+							$selected=($categoria['id'] == $fk_categoria )? 'selected': '';
+							echo  '<option '.$selected.' value="'.$categoria['id'].'">'.htmlentities($categoria['nombre']).'</option>';
+						} ?>						  
+					</select>
+				</div>
+				<div class="inputBox" style='margin-bottom:8px;display:inline;margin-left:10px; width:780px;'>					
 					<label style="width:auto;">Contenido:</label><br />																		
 					<textarea type='text' name='contenido' class="txtContenido" id="txtContenido" value=""  style="width:600px;text-align:left;height:400px;"><?php echo $contenido; ?>
 					</textarea>

@@ -112,7 +112,8 @@ var EdicionPublicacion = function(){
 			contenido	:tab.find('.txtContenido').val(),
 			url_imagen	:tab.find('input[name="url_imagen"]').val(),
 			posx	:tab.find('input[name="posx"]').val(),
-			posy	:tab.find('input[name="posy"]').val()
+			posy	:tab.find('input[name="posy"]').val(),
+			fk_categoria:tab.find('select[name="fk_categoria"]').val(),
 		};
 		
 		//Envia los datos al servidor, el servidor responde success true o false.

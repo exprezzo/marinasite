@@ -2,6 +2,8 @@
 	# Enrutamiento mediante htacces de apache		
     RewriteEngine On		
 	
+    RewriteRule ^$ core/entrada.php/paginas/home$1 [L]
+	
 	RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)$ core/entrada.php/$1 [L]

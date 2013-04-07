@@ -48,6 +48,7 @@ if ( !isset($_SESSION['isLoged'])|| $_SESSION['isLoged']!=true ){
 	<link href="/web/<?php echo $_PETICION->modulo; ?>/css/estilos.css" rel="stylesheet" type="text/css" />
 	<link href="/web/<?php echo $_PETICION->modulo; ?>/css/pedidoi.css" rel="stylesheet" type="text/css" />
 	<script src="/web/<?php echo $_PETICION->modulo; ?>/js/funciones.js" type="text/javascript"></script>
+	<link href="/<?php echo $_PETICION->modulo; ?>/sistema/cssmenu" rel="stylesheet" type="text/css" />
 	<script src="/web/<?php echo $_PETICION->modulo; ?>/js/TabManager.js" type="text/javascript"></script>
 	
 	<script type="text/javascript">		

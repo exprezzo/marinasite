@@ -5,9 +5,9 @@
 	<script src="/web/libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>	
 	<script type="text/javascript" src="http://workshop.rs/projects/coin-slider/coin-slider.min.js"></script>
 	<link rel="stylesheet" href="http://workshop.rs/projects/coin-slider/coin-slider-styles.css" type="text/css" />
-	<link href="/web/apps/portal/css/menu_fresco.css"  rel="stylesheet" type="text/css" />
-	<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/mundo_friki.css" rel="stylesheet" type="text/css" />'; ?>
-	<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
+	<link href="/web/portal/css/menu_fresco.css"  rel="stylesheet" type="text/css" />
+	<?php echo '<link href="/web/'.$_PETICION->modulo.'/css/mundo_friki.css" rel="stylesheet" type="text/css" />'; ?>
+	<?php echo '<link href="/web/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
 	<style>
 		.slider{			
 			/* background-color:black !important;			*/
@@ -16,7 +16,7 @@
 		
 		
 		.medusa{
-			background-image:url('/web/apps/marina/imagenes/medusa.jpg');
+			background-image:url('/web/marina/imagenes/medusa.jpg');
 			width:81px;
 			height:91px;
 			position:absolute;
@@ -227,7 +227,7 @@
 			}
 			.footer_wraper {
 				height:200px !important;
-				background-image:url('/web/apps/marina/imagenes/bg6_8_2.jpg');
+				background-image:url('/web/marina/imagenes/bg6_8_2.jpg');
 			}
 			.footer_wraper li{display:inline-block;padding:10px 30px 10px 0px;}
 		</style>

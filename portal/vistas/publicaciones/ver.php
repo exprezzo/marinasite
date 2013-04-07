@@ -1,4 +1,4 @@
-<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
+<?php echo '<link href="/web/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
 <style>
 	.info:first-letter {
 		display:block;

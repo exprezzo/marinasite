@@ -14,5 +14,12 @@ class Paginas extends Controlador{
 		$vista->publicaciones=$datos;		
 		return $vista->mostrar( '/mundo_friki' );
 	}	
+
+	function index(){
+		global $_PETICION;
+		$_PETICION->accion='home';
+		$vista=$this->getVista();
+		return $vista->mostrar();
+	}
 }
 ?>

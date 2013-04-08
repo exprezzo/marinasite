@@ -18,7 +18,7 @@
 	<div class="sitename" style="color: white;z-index:-1;
 position:absolute;
 width:100%;
-text-align: center;font-size:44px;"><?php echo NOMBRE_APL; ?></div>
+text-align: center;font-size:44px;"><?php echo $APP_CONFIG['nombre']; ?></div>
 
 	<div class="seach-box" style="z-index:2;">
 		<form class="searchform" action="/resultados" >

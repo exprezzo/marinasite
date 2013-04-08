@@ -241,7 +241,7 @@
 			<li><a href="#">Nosotros</a></li>					
 			<li><a href="#">Patrocinadores</a></li>
 			<li><a href="/contacto">Contacto</a></li>
-			<li><a href="/admin/general/index">Login</a></li>
+			<li><a href="/portal_admin/general/index">Login</a></li>
 		</ul>
 		<?php $this->mostrar('/footer'); ?>
 	</div>

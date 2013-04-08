@@ -1,23 +1,23 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html >
 	<head>			
-		<title><?php echo NOMBRE_APL; ?></title>
+		<title><?php echo $APP_CONFIG['nombre']; ?></title>
 		<link rel="shortcut icon" href="/favicon.ico"/>		
 		<!--jQuery References-->
 		<!--link href="/js/jquery-ui-1.9.2.custom/css/flick/jquery-ui-1.9.2.custom.css" rel="stylesheet"-->	
-		<script src="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/jquery-1.8.3.js"></script>
-		<script src="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>  
+		<script src="/web/<?php echo $_PETICION->modulo; ?>/libs/jquery-1.8.3.js"></script>
+		<script src="/web/<?php echo $_PETICION->modulo; ?>/libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>  
 		<!--Theme-->
 		<!--link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" rel="stylesheet" type="text/css" title="rocket-jqueryui" /-->
 		<!--link href="/css/themes/rocket/jquery-wijmo.css" rel="stylesheet" type="text/css" title="rocket-jqueryui" /-->
 		<link href="http://cdn.wijmo.com/themes/rocket/jquery-wijmo.css" rel="stylesheet" type="text/css" />		
-		<link href="/css/mods/<?php echo TEMA; ?>/mods.css" rel="stylesheet" type="text/css" />		
+		<link href="/css/mods/<?php echo $APP_CONFIG['tema']; ?>/mods.css" rel="stylesheet" type="text/css" />		
 		<!--Wijmo Widgets CSS-->	
-		<link href="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Complete/css/jquery.wijmo-complete.2.3.2.css" rel="stylesheet" type="text/css" />
-		<link href="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Open/css/jquery.wijmo-open.2.3.2.css" rel="stylesheet" type="text/css" />		
+		<link href="/web/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Complete/css/jquery.wijmo-complete.2.3.2.css" rel="stylesheet" type="text/css" />
+		<link href="/web/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Open/css/jquery.wijmo-open.2.3.2.css" rel="stylesheet" type="text/css" />		
 		<!--Wijmo Widgets JavaScript-->
-		<script src="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Complete/js/jquery.wijmo-complete.all.2.3.2.min.js" type="text/javascript"></script>
-		<script src="/web/apps/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Open/js/jquery.wijmo-open.all.2.3.2.min.js" type="text/javascript"></script>		
+		<script src="/web/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Complete/js/jquery.wijmo-complete.all.2.3.2.min.js" type="text/javascript"></script>
+		<script src="/web/<?php echo $_PETICION->modulo; ?>/libs/Wijmo.2.3.2/Wijmo-Open/js/jquery.wijmo-open.all.2.3.2.min.js" type="text/javascript"></script>		
 		<script type="text/javascript">
 			$(document).ready(function () {
 				kore={
@@ -42,7 +42,7 @@
 				
 			});
 		</script>
-		<link href="/web/apps/<?php echo $_PETICION->modulo; ?>/css/login.css" rel="stylesheet" type="text/css" />		
+		<link href="/web/<?php echo $_PETICION->modulo; ?>/css/login.css" rel="stylesheet" type="text/css" />		
 		<style type="text/css">
 			
 			

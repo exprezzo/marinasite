@@ -7,7 +7,7 @@ if ( !isset($_SESSION['isLoged'])|| $_SESSION['isLoged']!=true ){
 <html lang="us">
 <head>	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title><?php echo NOMBRE_APL; ?></title>
+	<title><?php echo $APP_CONFIG['nombre']; ?></title>
 	<!--jQuery References-->
 	<!--link href="/js/jquery-ui-1.9.2.custom/css/flick/jquery-ui-1.9.2.custom.css" rel="stylesheet"-->	
 	<script src="/web/<?php echo $_PETICION->modulo; ?>/libs/jquery-1.8.3.js"></script>
@@ -22,7 +22,7 @@ if ( !isset($_SESSION['isLoged'])|| $_SESSION['isLoged']!=true ){
 		//$rutaTema=$_TEMAS[TEMA];
 		
 		$rutaTema=getUrlTema('artic');
-		$rutaTema=getUrlTema(TEMA);
+		$rutaTema=getUrlTema($APP_CONFIG['tema']);
 		
 		$rutaMod='/web/<?php echo $_PETICION->modulo; ?>/css/mods/black-tie/black-tie.css';
 	?>
@@ -201,7 +201,7 @@ if ( !isset($_SESSION['isLoged'])|| $_SESSION['isLoged']!=true ){
 	<div id="splitter">
 		<div class="main_header">
 			<div style="padding:0px 0 0px 0px; float:left;position:relative;">
-				<a class="header_empresa ui-state-default" href="/index"><span style="margin:8px;"><?php echo NOMBRE_APL; ?></span></a>
+				<a class="header_empresa ui-state-default" href="/index"><span style="margin:8px;"><?php echo $APP_CONFIG['nombre']; ?></span></a>
 			</div>	
 					
 			<div class="user_widget" >

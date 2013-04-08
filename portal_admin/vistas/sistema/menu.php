@@ -34,7 +34,7 @@
 }
 </style>
 <div class="menu_page_header">
-<h1 style="display:inline-block;"><?php echo NOMBRE_APL; ?></h1>
+<h1 style="display:inline-block;"><?php echo $APP_CONFIG['nombre']; ?></h1>
 <h3 style="display:block;font-size:14px;">Menu principal</h3>
 </div>
 <ul>

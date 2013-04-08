@@ -38,6 +38,7 @@ var EdicionPublicacion = function(){
 		tab.css('border','0 1px 1px 1px');
 		
 		this.agregarClase('frmPublicacion');		
+		this.agregarClase('tab_'+this.controlador.nombre);		
 		
 		this.configurarFormulario(this.tabId);
 		this.configurarToolbar(this.tabId);		

@@ -1,4 +1,8 @@
-<?php echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
+<?php 
+echo '<link href="/web/apps/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; 
+$host=isset( $APP_CONFIG['host'] )? $APP_CONFIG['host'] : '';
+?>
+
 <style>
 	.info:first-letter {
 		display:block;
@@ -27,7 +31,7 @@
 						<div class="fecha"><?php echo $fecha; ?></div>   
 						<div class="autor"><?php echo $pub['autor']; ?></div>   
 					</div>
-					<div class="titulo"><a href="/publicaciones/ver?id=<?php echo $pub['id']; ?>"><span><?php echo htmlentities($pub['titulo'],ENT_QUOTES | ENT_IGNORE, "UTF-8"); ?> </span> </a></div>				
+					<div class="titulo"><a href="<?php echo $host; ?>/publicaciones/ver?id=<?php echo $pub['id']; ?>"><span><?php echo htmlentities($pub['titulo'],ENT_QUOTES | ENT_IGNORE, "UTF-8"); ?> </span> </a></div>				
 					<div class="categoria"><?php echo $pub['categoria']; ?> </div>   					
 				</li>
 						

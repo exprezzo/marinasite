@@ -11,6 +11,7 @@ $DB_CONFIG=array(
 $APP_CONFIG=array(
 	'nombre'=>'Coral MVC',
 	'tema'=>'rocket'
+	// ,'host'=>'/marinasite'
 );
 
 

@@ -1286,7 +1286,7 @@ jQuery.support = (function() {
 
 		// Get the style information from getAttribute
 		// (IE uses .cssText instead)
-		style: /top/.test( a.getAttribute("style") ),
+		style:  /top/.test( a.getAttribute("style") ),
 
 		// Make sure that URLs aren't manipulated
 		// (IE normalizes it by default)
@@ -1295,7 +1295,7 @@ jQuery.support = (function() {
 		// Make sure that element opacity exists
 		// (IE uses filter instead)
 		// Use a regex to work around a WebKit issue. See #5145
-		opacity: /^0.5/.test( a.style.opacity ),
+		opacity:  /^0.5/.test( a.style.opacity ),
 
 		// Verify style float existence
 		// (IE uses styleFloat instead of cssFloat)
@@ -7572,9 +7572,9 @@ jQuery.extend({
 		},
 
 		contents: {
-			xml: /xml/,
-			html: /html/,
-			json: /json/
+			xml:  /xml/,
+			html:  /html/,
+			json:  /json/
 		},
 
 		responseFields: {
@@ -8251,7 +8251,7 @@ jQuery.ajaxSetup({
 		script: "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript"
 	},
 	contents: {
-		script: /javascript|ecmascript/
+		script:  /javascript|ecmascript/
 	},
 	converters: {
 		"text script": function( text ) {

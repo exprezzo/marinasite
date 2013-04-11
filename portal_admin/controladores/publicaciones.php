@@ -42,8 +42,8 @@ class Publicaciones extends Controlador{
 			$categorias=$sth->fetchAll(PDO::FETCH_ASSOC);
 		}
 		$vista->categorias=$categorias;
-		
-		$vista->mostrar();
+		global $_PETICION;
+		$vista->mostrar('/'.$_PETICION->controlador.'/edicion');
 	}
 	/* */
 	// function guardar(){

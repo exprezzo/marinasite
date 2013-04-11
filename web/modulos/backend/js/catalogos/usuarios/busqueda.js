@@ -1,4 +1,4 @@
-﻿var Busquedapublicaciones=function(){
+﻿var Busquedausuarios=function(){
 	this.tituloNuevo='Nueva';
 	this.eliminar=function(){
 	

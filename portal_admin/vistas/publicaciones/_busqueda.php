@@ -1,8 +1,17 @@
+﻿
+<script src="/web/<?php echo $_PETICION->modulo; ?>/js/catalogos/<?php echo $_PETICION->controlador; ?>/busqueda.js"></script>
 
-<script src="<?php echo $MOD_WEB_PATH; ?>js/catalogos/<?php echo $_PETICION->controlador; ?>/busqueda.js"></script>
+<style type="text/css">
+	/*
+		div.lista_orden_compra{
+			margin-top: 25px !important;			
+		}
+	*/
+</style>
 
 <script>			
-	$( function(){		
+	$( function(){
+		
 		var config={
 			tab:{
 				id:'<?php echo $_REQUEST['tabId']; ?>'
@@ -17,9 +26,11 @@
 				nombre:'Publicaciones'
 			}
 			
-		};				
-		 var lista=new Busquedapublicaciones();
-		 lista.init(config);		
+		};
+				
+		 var lista=new BusquedaPublicaciones();
+		 lista.init(config);
+		
 	});
 </script>
 <?php 	

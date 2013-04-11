@@ -1,4 +1,4 @@
-﻿var Edicionpublicaciones = function(){
+﻿var Edicionseguridad = function(){
 	this.editado=false;
 	this.saveAndClose=false;
 	

@@ -4,3 +4,6 @@
 [submodule "marinamod"]
 	path = marinamod
 	url = https://exprezzo@github.com/exprezzo/marina_mod.git
+[submodule "modulos/backend"]
+	path = modulos/backend
+	url = https://exprezzo@github.com/exprezzo/backend_mod.git

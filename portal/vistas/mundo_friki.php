@@ -1,13 +1,14 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html >
 <head>
-	<script src="/web/libs/jquery-1.8.3.js"></script>
-	<script src="/web/libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>	
+	<title><?php echo $APP_CONFIG['nombre']; ?></title>	
+	<script src="<?php echo $REDIRECT_URL; ?>web/libs/jquery-1.8.3.js"></script>
+	<script src="<?php echo $REDIRECT_URL; ?>web/libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>	
 	<script type="text/javascript" src="http://workshop.rs/projects/coin-slider/coin-slider.min.js"></script>
 	<link rel="stylesheet" href="http://workshop.rs/projects/coin-slider/coin-slider-styles.css" type="text/css" />
-	<link href="/web/portal/css/menu_fresco.css"  rel="stylesheet" type="text/css" />
-	<?php echo '<link href="/web/'.$_PETICION->modulo.'/css/mundo_friki.css" rel="stylesheet" type="text/css" />'; ?>
-	<?php echo '<link href="/web/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
+	<link href="<?php echo $REDIRECT_URL; ?>web/portal/css/menu_fresco.css"  rel="stylesheet" type="text/css" />
+	<?php echo '<link href="'.$REDIRECT_URL.'web/'.$_PETICION->modulo.'/css/mundo_friki.css" rel="stylesheet" type="text/css" />'; ?>
+	<?php echo '<link href="'.$REDIRECT_URL.'web/'.$_PETICION->modulo.'/css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
 	<style>
 		.slider{			
 			/* background-color:black !important;			*/
@@ -32,7 +33,7 @@
 				margin-left:-450px;
 		}
 		.main_header{
-			/* background-image: url('http://themedemo.pmnova.com/wp-content/themes/Blue_Skyline/images/Page-BgGlare.png') !important;
+			/* background-image: url('http://someinterestingfacts.net/wp-content/uploads/2013/01/Coral.jpg') !important;
 			background-repeat: no-repeat !important; */
 		}
 		.contenido_center.ui-widget-content{
@@ -241,7 +242,7 @@
 			<li><a href="#">Nosotros</a></li>					
 			<li><a href="#">Patrocinadores</a></li>
 			<li><a href="/contacto">Contacto</a></li>
-			<li><a href="/portal_admin/general/index">Login</a></li>
+			<li><a href="/portal_admin/sistema/index">Login</a></li>
 		</ul>
 		<?php $this->mostrar('/footer'); ?>
 	</div>

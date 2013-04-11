@@ -144,7 +144,9 @@
 		
 		var campos=[
 			{ name: "id"  },
-			{ name: "titulo"}
+			{ name: "titulo"},
+			{ name: "fecha"}
+			
 		];
 		var dataReader = new wijarrayreader(campos);
 	
@@ -180,10 +182,12 @@
 			allowPaging: true,
 			pageSize:pageSize,
 			selectionMode:'singleRow',
+			showFilter:true,
 			data:dataSource,
 			columns: [ 
-			    { dataKey: "id", hidden:true, visible:true, headerText: "ID" },								
-				{ dataKey: "titulo", hidden:true, visible:true, headerText: "Titulo" },								
+			    { dataKey: "id", visible:true, headerText: "ID" },								
+				{ dataKey: "titulo",  visible:true, headerText: "Titulo" },								
+				{ dataKey: "fecha", visible:true, headerText: "Fecha" },								
 				// {dataKey: "idestado", headerText: "Estado",width:'12%',
 					// cellFormatter: function (args) {
                             // if (args.row.type & $.wijmo.wijgrid.rowType.data) {

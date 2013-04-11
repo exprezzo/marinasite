@@ -9,7 +9,7 @@ $DB_CONFIG=array(
 );
 
 $APP_CONFIG=array(
-	'nombre'=>'Marina MVC',
+	'nombre'=>'Coral MVC',
 	'tema'=>'rocket'
 );
 

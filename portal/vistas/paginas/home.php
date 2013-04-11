@@ -7,9 +7,9 @@
 		</div>    
 		<div class="triangle-l"></div>		
 		<div style="clear:both;"></div>
-		<div>
+		<div style="heigth:500px;">
 			
-			<img src='http://workshop.rs/wp-content/uploads/2010/04/coin-slider.png' style="margin-left:20px; margin-top:37px;width:735px; ">
+			<img src='http://img.gawkerassets.com/img/17huf9h8j72pajpg/original.jpg' style="margin-left:20px; margin-top:37px;width:754px; ">
 			
 		</div>		
 		<!-- -->

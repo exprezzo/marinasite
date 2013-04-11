@@ -9,11 +9,11 @@ $DB_CONFIG=array(
 );
 
 $APP_CONFIG=array(
-	'nombre'=>'Marina MVC',
+	'nombre'=>'Coral MVC',
 	'tema'=>'rocket'
 );
 
-$_DEFAULT_CONTROLLER='general';
+$_DEFAULT_CONTROLLER='sistema';
 $_DEFAULT_ACTION='index';
 $_LOGIN_REDIRECT_PATH = '/portal_admin/'.$_DEFAULT_CONTROLLER.'/'.$_DEFAULT_ACTION;
 

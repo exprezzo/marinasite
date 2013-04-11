@@ -1,3 +1,6 @@
 [submodule "core"]
 	path = core
 	url = https://exprezzo@github.com/exprezzo/marinamvc.git
+[submodule "marinamod"]
+	path = marinamod
+	url = https://exprezzo@github.com/exprezzo/marina_mod.git

@@ -18,6 +18,8 @@ $APP_CONFIG=array(
 $_DEFAULT_CONTROLLER='paginas';
 $_DEFAULT_ACTION='index';
 
+
+$_LOGIN_REDIRECT_PATH= 'sistema';
 // $_TEMA='rocket';
 
 

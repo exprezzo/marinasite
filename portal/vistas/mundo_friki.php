@@ -2,13 +2,15 @@
 <html >
 <head>
 	<title><?php echo $APP_CONFIG['nombre']; ?></title>	
-	<script src="<?php echo $MOD_WEB_PATH; ?>libs/jquery-1.8.3.js"></script>
-	<script src="<?php echo $MOD_WEB_PATH; ?>libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>	
+	<script src="<?php echo $WEB_BASE; ?>libs/jquery-1.8.3.js"></script>
+	<script src="<?php echo $WEB_BASE; ?>libs/jquery-ui-1.9.2.custom/jquery-ui-1.9.2.custom.js"></script>	
 	<script type="text/javascript" src="http://workshop.rs/projects/coin-slider/coin-slider.min.js"></script>
 	<link rel="stylesheet" href="http://workshop.rs/projects/coin-slider/coin-slider-styles.css" type="text/css" />
 	<link href="<?php echo $MOD_WEB_PATH; ?>css/menu_fresco.css"  rel="stylesheet" type="text/css" />
-	<?php echo '<link href="'.$MOD_WEB_PATH.'css/mundo_friki.css" rel="stylesheet" type="text/css" />'; ?>
-	<?php echo '<link href="'.$MOD_WEB_PATH.'css/w_noticias.css" rel="stylesheet" type="text/css" />'; ?>
+	<?php
+		echo '<link href="'.$MOD_WEB_PATH.'css/mundo_friki.css" rel="stylesheet" type="text/css" />'; 
+		echo '<link href="'.$MOD_WEB_PATH.'css/w_noticias.css" rel="stylesheet" type="text/css" />';	
+	?>	
 	<style>
 		.slider{			
 			/* background-color:black !important;			*/
@@ -242,7 +244,7 @@
 			<li><a href="#">Nosotros</a></li>					
 			<li><a href="#">Patrocinadores</a></li>
 			<li><a href="/contacto">Contacto</a></li>
-			<li><a href="/portal_admin/sistema/index">Login</a></li>
+			<li><a href="/sistema">Login</a></li>
 		</ul>
 		<?php $this->mostrar('/footer'); ?>
 	</div>

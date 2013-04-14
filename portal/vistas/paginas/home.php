@@ -76,5 +76,5 @@
 		
 	</div>
 	
-	<?php $this->mostrar('/sidebar'); ?>
+	<?php $this->mostrar('/sidebar', true); ?>
 </div>

@@ -156,7 +156,7 @@
 </head>
 <body>
 	<div class="header_wraper">
-		<?php $this->mostrar('/header'); ?>
+		<?php $this->mostrar('/header', true); ?>
 	</div>
 	<div class="main_slideshow" style="height:190px;background-color:yellow;width:100%;">
 		<div class="slider" style="display:none;">
@@ -246,7 +246,7 @@
 			<li><a href="/contacto">Contacto</a></li>
 			<li><a href="/sistema">Login</a></li>
 		</ul>
-		<?php $this->mostrar('/footer'); ?>
+		<?php $this->mostrar('/footer', true); ?>
 	</div>
 	
 		

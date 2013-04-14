@@ -9,9 +9,9 @@
 	<div id="menu_principal" style="position:relative;text-align:center;z-index:1;">
 		<?php
 		if (isset($this->edicion) &&  $this->edicion=== true){
-			$this->mostrar('/menu_edicion');
+			$this->mostrar('/menu_edicion', true);
 		}else{
-			$this->mostrar('/menu');
+			$this->mostrar('/menu', true);
 		}		
 		?>
 	</div>

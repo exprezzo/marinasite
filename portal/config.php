@@ -15,8 +15,8 @@ $APP_CONFIG=array(
 );
 
 
-$_DEFAULT_CONTROLLER='paginas';
-$_DEFAULT_ACTION='index';
+// $_DEFAULT_CONTROLLER='paginas';
+ $_DEFAULT_ACTION='home';
 
 
 $_LOGIN_REDIRECT_PATH= 'sistema';

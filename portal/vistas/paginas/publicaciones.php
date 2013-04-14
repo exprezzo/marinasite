@@ -1,3 +1,4 @@
+
 	<div class="col_center" style="float:left;">
 		<!-- -->
 		<?php 
@@ -57,5 +58,5 @@
 		<?php } ?>
 		<?php } ?>
 	</div>
-	<?php $this->mostrar('/sidebar'); ?>
+	<?php $this->mostrar('/sidebar', true); ?>
 </div>

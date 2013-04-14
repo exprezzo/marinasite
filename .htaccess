@@ -2,6 +2,9 @@
 	# Enrutamiento mediante htacces de apache		
     RewriteEngine On		
 	
+	RewriteRule ^$ core/entrada.php/paginas/inicio$1 [L]
+	RewriteRule ^/$ core/entrada.php/paginas/inicio$1 [L]
+	
 	RewriteRule ^sistema$ core/entrada.php/backend/backend/index$1 [L]
 	RewriteRule ^sistema/$ core/entrada.php/backend/backend/index$1 [L]
 	
